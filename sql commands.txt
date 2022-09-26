@@ -1,0 +1,29 @@
+SQL Commands:
+
+CREATE DATABASE IF NOT EXISTS db_name;
+
+USE db_name; #So you can start operating on it
+
+Data Types:               CHAR(#) a fixed size for all entries even if they are less than  #
+	                 VARCHAR(#): a string of variable size
+	                 ENUM("val1", "val2".....)
+
+		DECIMAL(Percision, Scale) Percision > Total number of digits	Scale-> number of digits after the decimal point
+				
+CREATE TABLE table_name (cols);
+
+DROP TALE table_name;
+
+to create a foreign key columns:
+	FOREIGN KEY (name) REFRENCES table_to_reference(primary_key) ON DELETE CASCADE
+
+adding a column to a table after it has been created:
+	ALTER TABLE name
+	ADD FOREIGN KEY (col_name) REFERENCES parent_table(primary_key) ON DELETE CASCADE;
+
+to update existing records:
+	UPDATE table_name SET col1 = val1, col2=val2.... WHERE conditions
+
+to delete a record:
+	DELETE FROM table_name WHERE conditions
+
